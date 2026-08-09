@@ -34,25 +34,25 @@ O banco também precisa aceitar conexões simultâneas das duas réplicas da apl
 
 **Vantagens:**
 
-\- Persistência independente dos pods
+- Persistência independente dos pods
 
-\- Administração simplificada
+- Administração simplificada
 
-\- Backup e manutenção gerenciados pelo provedor
+- Backup e manutenção gerenciados pelo provedor
 
-\- Permite acesso simultâneo por múltiplas réplicas
+- Permite acesso simultâneo por múltiplas réplicas
 
-\- Maior disponibilidade do que um banco executando dentro do cluster single-node
+- Maior disponibilidade do que um banco executando dentro do cluster single-node
 
 
 
 **Desvantagens:**
 
-\- Custo adicional por tempo de uso
+- Custo adicional por tempo de uso
 
-\- Menor controle sobre algumas configurações avançadas
+- Menor controle sobre algumas configurações avançadas
 
-\- Dependência do provedor para upgrades e manutenção
+- Dependência do provedor para upgrades e manutenção
 
 
 
@@ -62,21 +62,21 @@ O banco também precisa aceitar conexões simultâneas das duas réplicas da apl
 
 **Vantagens:**
 
-\- Menor quantidade de serviços externos
+- Menor quantidade de serviços externos
 
-\- Possibilidade de reduzir custo em ambientes pequenos
+- Possibilidade de reduzir custo em ambientes pequenos
 
 
 
 **Desvantagens:**
 
-\- Exigiria volume persistente
+- Exigiria volume persistente
 
-\- Backup e recuperação ficariam sob responsabilidade da equipe
+- Backup e recuperação ficariam sob responsabilidade da equipe
 
-\- Maior risco de perda de dados em caso de falha ou recriação da VM
+- Maior risco de perda de dados em caso de falha ou recriação da VM
 
-\- Banco e aplicação compartilhariam o mesmo ponto único de falha
+- Banco e aplicação compartilhariam o mesmo ponto único de falha
 
 
 
@@ -88,7 +88,7 @@ Foi escolhido o **DBaaS PostgreSQL 17 da Magalu Cloud**.
 
 
 
-O banco foi mantido fora do cluster K3s e acessado pela aplicação por meio da variável `DATABASE\_URL`, armazenada como Secret no Kubernetes.
+O banco foi mantido fora do cluster K3s e acessado pela aplicação por meio da variável `DATABASE_URL`, armazenada como Secret no Kubernetes.
 
 
 
@@ -104,15 +104,15 @@ A decisão priorizou persistência, disponibilidade e redução do trabalho oper
 
 
 
-\- Dados sobrevivem à recriação dos pods da aplicação
+- Dados sobrevivem à recriação dos pods da aplicação
 
-\- As duas réplicas podem acessar o mesmo banco simultaneamente
+- As duas réplicas podem acessar o mesmo banco simultaneamente
 
-\- Menor esforço de administração do PostgreSQL
+- Menor esforço de administração do PostgreSQL
 
-\- Maior separação entre estado da aplicação e infraestrutura de execução
+- Maior separação entre estado da aplicação e infraestrutura de execução
 
-\- Menor risco de perda de dados em caso de falha de pod
+- Menor risco de perda de dados em caso de falha de pod
 
 
 
@@ -120,10 +120,10 @@ A decisão priorizou persistência, disponibilidade e redução do trabalho oper
 
 
 
-\- Existe custo por hora de uso do serviço
+- Existe custo por hora de uso do serviço
 
-\- Há dependência do provedor para manutenção e upgrades
+- Há dependência do provedor para manutenção e upgrades
 
-\- Algumas configurações avançadas podem ter menor flexibilidade
+- Algumas configurações avançadas podem ter menor flexibilidade
 
-\- A aplicação depende da conectividade entre o cluster K3s e o DBaaS
+- A aplicação depende da conectividade entre o cluster K3s e o DBaaS

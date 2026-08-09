@@ -30,29 +30,29 @@ Também era necessário utilizar Kubernetes para praticar conceitos de orquestra
 
 **Vantagens:**
 
-\- Kubernetes leve e adequado para ambientes pequenos
+- Kubernetes leve e adequado para ambientes pequenos
 
-\- Menor consumo de recursos
+- Menor consumo de recursos
 
-\- Menor custo de infraestrutura
+- Menor custo de infraestrutura
 
-\- Provisionamento relativamente simples
+- Provisionamento relativamente simples
 
-\- Compatibilidade com manifests Kubernetes padrão
+- Compatibilidade com manifests Kubernetes padrão
 
-\- Permite self-healing, múltiplas réplicas e integração com Helm
+- Permite self-healing, múltiplas réplicas e integração com Helm
 
 
 
 **Desvantagens:**
 
-\- Cluster single-node
+- Cluster single-node
 
-\- A própria VM representa um ponto único de falha
+- A própria VM representa um ponto único de falha
 
-\- Não há alta disponibilidade nativa do control plane
+- Não há alta disponibilidade nativa do control plane
 
-\- Capacidade limitada aos recursos da VM
+- Capacidade limitada aos recursos da VM
 
 
 
@@ -62,19 +62,19 @@ Também era necessário utilizar Kubernetes para praticar conceitos de orquestra
 
 **Vantagens:**
 
-\- Control plane administrado pelo provedor
+- Control plane administrado pelo provedor
 
-\- Melhor suporte a alta disponibilidade
+- Melhor suporte a alta disponibilidade
 
-\- Facilita evolução para múltiplos nós
+- Facilita evolução para múltiplos nós
 
 
 
 **Desvantagens:**
 
-\- Maior complexidade e custo para o escopo do projeto
+- Maior complexidade e custo para o escopo do projeto
 
-\- Mais recursos do que o necessário para o laboratório
+- Mais recursos do que o necessário para o laboratório
 
 
 
@@ -84,21 +84,21 @@ Também era necessário utilizar Kubernetes para praticar conceitos de orquestra
 
 **Vantagens:**
 
-\- Implantação mais simples
+- Implantação mais simples
 
-\- Menor curva de aprendizado
+- Menor curva de aprendizado
 
 
 
 **Desvantagens:**
 
-\- Não oferece orquestração Kubernetes
+- Não oferece orquestração Kubernetes
 
-\- Não possui self-healing declarativo equivalente
+- Não possui self-healing declarativo equivalente
 
-\- Escalabilidade e gerenciamento de réplicas mais limitados
+- Escalabilidade e gerenciamento de réplicas mais limitados
 
-\- Não atenderia aos objetivos da competência
+- Não atenderia aos objetivos da competência
 
 
 
@@ -126,21 +126,21 @@ A decisão priorizou simplicidade, menor custo e compatibilidade com os recursos
 
 
 
-\- Menor custo em comparação com uma solução Kubernetes gerenciada
+- Menor custo em comparação com uma solução Kubernetes gerenciada
 
-\- Uso de manifests Kubernetes padrão
+- Uso de manifests Kubernetes padrão
 
-\- Recuperação automática de pods
+- Recuperação automática de pods
 
-\- Duas réplicas da aplicação
+- Duas réplicas da aplicação
 
-\- Uso de livenessProbe e readinessProbe
+- Uso de livenessProbe e readinessProbe
 
-\- Integração com Helm
+- Integração com Helm
 
-\- Integração com Prometheus e Grafana
+- Integração com Prometheus e Grafana
 
-\- Facilidade para aumentar o número de réplicas
+- Facilidade para aumentar o número de réplicas
 
 
 
@@ -148,12 +148,12 @@ A decisão priorizou simplicidade, menor custo e compatibilidade com os recursos
 
 
 
-\- A VM é um single point of failure
+- A VM é um single point of failure
 
-\- Não existe alta disponibilidade real do cluster
+- Não existe alta disponibilidade real do cluster
 
-\- A capacidade é limitada aos recursos da VM
+- A capacidade é limitada aos recursos da VM
 
-\- Uma falha completa da VM interrompe todos os workloads
+- Uma falha completa da VM interrompe todos os workloads
 
-\- Para um ambiente de produção mais crítico, seria recomendável migrar para Kubernetes gerenciado ou uma arquitetura com múltiplos nós
+- Para um ambiente de produção mais crítico, seria recomendável migrar para Kubernetes gerenciado ou uma arquitetura com múltiplos nós
