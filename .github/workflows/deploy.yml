@@ -34,10 +34,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Login no Container Registry
+        env:
+          MGC_REGISTRY_USER: ${{ secrets.MGC_REGISTRY_USER }}
+          MGC_REGISTRY_PASSWORD: ${{ secrets.MGC_REGISTRY_PASSWORD }}
         run: |
-          docker login https://${{ env.REGISTRY }} \
-            -u ${{ secrets.MGC_REGISTRY_USER }} \
-            -p ${{ secrets.MGC_REGISTRY_PASSWORD }}
+          printf '%s' "$MGC_REGISTRY_PASSWORD" | docker login "${{ env.REGISTRY }}" --username "$MGC_REGISTRY_USER" --password-stdin
 
       - name: Build e push da imagem
         run: |
